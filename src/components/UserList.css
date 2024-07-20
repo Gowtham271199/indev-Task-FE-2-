@@ -1,0 +1,81 @@
+/* UserList.css */
+.user-list-container {
+    text-align: center;
+    background-color: #fff; /* White background for the user list container */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  h2 {
+    color: #333; /* Darker color for the heading */
+  }
+  
+  .add-user-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #0f7ce1;
+    text-decoration: none;
+    border: 1px solid #61dafb;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .add-user-link:hover {
+    background-color: #61dafb;
+    color: white;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    position: relative; /* Position relative to place buttons absolutely */
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for list items */
+    border-radius: 4px;
+    padding-right: 140px; /* Extra space for buttons on the right */
+  }
+  
+  .edit-link-button {
+    background-color: #4caf50; /* Green color for edit button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute; /* Position absolutely within the list item */
+    right: 80px; /* Position of the edit button from the right */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  .edit-link-button:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute; /* Position absolutely within the list item */
+    right: 10px; /* Position of the delete button from the right */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  .delete-button:hover {
+    background-color: #ff3333;
+  }
+  
