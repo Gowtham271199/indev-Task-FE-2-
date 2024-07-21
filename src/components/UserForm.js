@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import './UserForm.css';
+import { backurl } from './url';
 
 
 const UserForm = () => {
@@ -19,14 +20,15 @@ const UserForm = () => {
   const [editing, setEditing] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
-
+     console.log(backurl)
   useEffect(() => {
     if (id) {
       const fetchUser = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/users/${id}`);
+          const response = await axios.get(`${backurl}/api/users/${id}`);
           setUser(response.data);
           setEditing(true);
+          
         } catch (err) {
           console.error(err);
         }
@@ -51,9 +53,9 @@ const UserForm = () => {
       console.log("Submitting user payload:", userPayload); // Log payload for debugging
   
       if (editing) {
-        await axios.put(`http://localhost:5000/api/users/${id}`, userPayload);
+        await axios.put(`${backurl}/api/users/${id}`, userPayload);
       } else {
-        await axios.post('http://localhost:5000/api/users', userPayload);
+        await axios.post(`${backurl}/api/users`, userPayload);
       }
   
       navigate('/');

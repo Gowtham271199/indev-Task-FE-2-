@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './UserList.css'; 
+import { backurl } from './url';
 
 const UserList = () => {
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/users');
+        const response = await axios.get(`${backurl}/api/users`);
         setUsers(response.data);
       } catch (err) {
         console.error(err);
@@ -20,7 +22,7 @@ const UserList = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`${backurl}/api/users/${id}`);
       setUsers(users.filter(user => user._id !== id));
     } catch (err) {
       console.error(err);
