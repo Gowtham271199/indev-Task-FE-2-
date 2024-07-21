@@ -33,38 +33,39 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Additional Information
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Time Taken
+- **How long did it take you to complete this assignment?**
+  - It took me approximately 4 hours to complete this assignment.
 
-## Learn More
+### Challenges
+- **What about this assignment did you find most challenging?**
+  - The most challenging part of the assignment was implementing the pagination, search, and sorting functionalities efficiently while ensuring the API performance remains optimal.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Clarifications
+- **What about this assignment did you find unclear?**
+  - The instructions were mostly clear, but I had to make some assumptions about the default values for pagination parameters and the expected behavior when combining multiple query parameters.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Unexpected Challenges
+- **What challenges did you face that you did not expect?**
+  - I encountered unexpected challenges with setting up and configuring the MongoDB connection, especially ensuring that the database schema and models were correctly defined to meet the requirements.
 
-### Code Splitting
+### Assignment Difficulty
+- **Do you feel like this assignment has an appropriate level of difficulty?**
+  - Yes, I believe the assignment has an appropriate level of difficulty. It effectively tests essential backend development skills, including RESTful API design, database management, and handling complex queries.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Tooling Decisions
+- **Briefly explain your decisions to use tools, frameworks, and libraries.**
+  - I chose Express.js for its simplicity and flexibility in building RESTful APIs. MongoDB was selected as the database for its ease of integration with Node.js and its document-oriented structure, which is suitable for handling user data. Additional libraries like `body-parser`, `cors`, and `dotenv` were used to manage request parsing, cross-origin resource sharing, and environment variables, respectively. For testing, I used `jest` and `supertest` to ensure robust and reliable API endpoints.
 
-### Analyzing the Bundle Size
+### Assumptions and Decisions
+- **Did you make certain assumptions and decisions around the application? Please elaborate on your reasoning.**
+  - Yes, I made the following assumptions and decisions:
+    - Default pagination limit: I set the default pagination limit to 5 to ensure the API returns a manageable number of users per request, improving performance and usability.
+    - Case-insensitive search: I implemented case-insensitive search for user names to make the search functionality more user-friendly and flexible.
+    - Error handling: I included basic error handling to return meaningful error messages and status codes to the client, ensuring a better developer experience when integrating with the API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
